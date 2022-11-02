@@ -1,0 +1,64 @@
+---------------------exp2_git-----------
+sudo su
+sudo apt-get install git
+git --version
+git config --global user.name "Username"
+git config --global user.email "email"
+git config --global --list
+mkdir git-demo-project
+ls
+cd git-demo-project
+git init git-demo-project
+cd git-demo-project
+touch db
+ls
+git add db
+git status
+git commit -m "First commit"
+git log
+git log --oneline
+git show <64f3905> similar number will be displayed when you run git log --oneline
+create a repo in git 
+git remote add origin <gitlink>
+git push origin master (ask for username and passwd=token)
+check github gui file will be uploaded
+
+
+
+-------------exp3_git control version--------------
+sudo su
+git config --global user.name "Username"
+git config --global user.email "email"
+git config --global --list 
+mkdir apsit
+cd apsit
+git init
+touch it
+ls
+cat > it
+welcome to apsit it dept <------write this line in terminal and ctrl+c
+git status
+git add .
+git status
+git commit -m "First commit"
+git status
+git log 
+git show
+
+
+touch it2
+ls
+cat > it2
+apsit <------write this line in terminal and ctrl+c
+git status
+git add .
+git status
+git commit -m "second commit"
+git status
+git log 
+git status
+git show
+
+
+
+
