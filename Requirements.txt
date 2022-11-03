@@ -1,0 +1,80 @@
+---------------------JenkinsMaven 
+Install maven -> https://downloads.apache.org/maven/maven-3/ -> binaries -> .tar
+tar xzvf filename.bin.tar.gz
+Go to jenkins username-user pass-123456
+manage jenkins->
+available->
+maven plugin->
+install
+go to global tool configuration->
+scroll to maven->name it-> save&apply
+got to new items->name it->click maven->ok
+select github repo->in source code management->select git
+paste the link of git maven repo-> https://github.com/jenkins-docs/simple-java-maven-app
+apply and save
+click build and see result in console ouput
+
+
+-----------------exp6_master-slave jenkins------------------
+Jenkins Master-Slave Architecture with Scaling
+sudo su
+ssh-keygen
+cd /root/.ssh 
+ls
+rm -rf id_rsa
+rm -rf id_rsa.pub
+rm -rf know_hosts
+ ls
+ssh apsit@destination ip add
+ssh-copy-id -i apsit@destination ip add
+go to jenkins localhost8080
+and make changes 
+
+------------exp8_Docker------------------
+sudo apt-get install docker.io sudo su
+docker --version
+docker pull ubuntu/mysql/python
+docker images
+docker rmi reponame:tag
+docker ps   / docker ps -a (display all containers)
+docker run -it -d image name (ubuntu)
+docker kill containerid
+docker stop containerid
+docker login (username-dllab pass-dllabpractical)
+docker logout
+
+---------------ansible----------
+sudo apt update
+sudo apt install software-properties-common
+sudo add-apt-repository --yes --update ppa:ansible/ansible
+sudo apt install ansible
+sudo cd /etc/ansible ls
+mkdir playbooks
+cd playbooks
+sudo touch playbook1.yml
+vim/nano playbook1.yml  cd..
+ansible-playbook playbook1.yml
+cat playbook1.yml
+ps -ef | grep nginx /etc/ansible/playbooks
+
+
+playbook1.yml
+- name: nginx install and start services
+  hosts: all
+  become: true
+
+  tasks:
+  - name: install nginx
+    apt:
+      name: nginx
+      state: latest
+
+  - name: start nginx
+    service:
+       name: nginx
+       state: started
+
+
+
+
+
